@@ -1,29 +1,43 @@
 package code.refactoring.methodsimple_1;
 
+// ì •ë‹µì§€ ì™œ ì—†ì¥¬...
+
 public class SecurityMonitor {
 	
-	// Ä§ÀÔÀÚ ÀÌ¸§À» ¾Ë·ÁÁÖ°í °æ°í¸Ş½ÃÁö¸¦ º¸³¿
+	// ì¹¨ì…ì ì´ë¦„ì„ ì•Œë ¤ì£¼ê³  ê²½ê³  ë©”ì„¸ì§€ë¥¼ ë³´ëƒ„ 
   public void checkSecurity(String[] people) {
-	  String[] found = foundMiscreant(people);
+//	  String[] found = foundMiscreant(people);
+	  sendAlert(people);
+	  String[] found = foundPerson(people);
 	  someLaterCode(found);
   }
-	  
-  private String[] foundMiscreant(String[] people){
-	  
-	  String[] found = new String[people.length];
+
+  private void sendAlert(String[] people){
 	  
 	  for (int i = 0; i < people.length; i++) {
 		  if (people[i].equals ("Don")){
 			  sendAlertMsg();
-			  found[i] = "Don";
 		  }
 		  if (people[i].equals ("John")){
 			  sendAlertMsg();
-			  found[i] = "John";
 		  }
 	  }
-	  return found;
   }
+
+
+private String[] foundPerson(String[] people) {
+	String[] found = new String[people.length];
+	for (int i = 0; i < people.length; i++) {
+		  if (people[i].equals ("Don")){
+			  sendAlertMsg();
+		  }
+		  if (people[i].equals ("John")){
+			  sendAlertMsg();
+		  }
+	  }
+	return found;
+}
+  
   private void sendAlertMsg(){
 	  System.out.println( "Alert" );	 
   }

@@ -51,7 +51,7 @@
 1. code.refactoring.junit
 2. code.tdd.example과 code.tdd.mock
 3. code.refactoring.methodarray1
-4. code.refactoring.methodsimple1
+4. code.refactoring.methodsimple1 => 재확인 필요
 5. code.refactoring.methodarray2
 6. code.refactoring.methodarray3
 7. code.refactoring.methodarray4
