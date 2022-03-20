@@ -11,19 +11,25 @@ public class Price {
 	}
 	public double getPrice() {
 		int basePrice = _quantity * _itemPrice;
-		int discountLevel;
+//		int discountLevel;
 		
-		if (_quantity > 100) discountLevel = 2;
-		else discountLevel = 1;
+//		discountLevel = getDiscountLevel();
 		
-		double finalPrice = discountedPrice(basePrice, discountLevel);
+		double finalPrice = discountedPrice(basePrice);
 		
 		return finalPrice;
 	}
 
-	private double discountedPrice(int basePrice, int discountLevel) {
+	private double discountedPrice(int basePrice) {
 		if (discountLevel == 2) return basePrice * 0.1;
 		else return basePrice * 0.05;
+	}
+	
+	private int getDiscountLevel() {
+//		int discountLevel;
+		if (_quantity > 100) discountLevel = 2;
+		else discountLevel = 1;
+//		return discountLevel;
 	}
 
 }
