@@ -13,7 +13,7 @@ public class OweTest {
 
 	@Test
 	public void testPrintOwing() {
-		Owe owe = new Owe("ȫ�浿");
+		Owe owe = new Owe("홍길동");
 		Order order1=new Order(1000); 
 		owe.addOrder(order1);
 		owe.printOwing(200);

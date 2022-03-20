@@ -18,22 +18,38 @@ public class Owe {
 	
 	public void printOwing(double previousAmount) {
 
-	    Enumeration e = _orders.elements();
+	    
 	    double outstanding = previousAmount*1.2;
-	    System.out.println("************************");
-	    System.out.println("*******°í°´ ¿Ü»ó*******");
-	    System.out.println("************************");
+	    printBanner();
 
-	    // ¿Ü»ó¾× °è»ê
+	    // ê°ê°ì˜ ì¸ìˆ˜ê°’ í•„ìš”í•œ ê²ƒì¸ì§€, ì ì ˆí•œì§€ ì¡°ì • 
+	    outstanding = getOutstanding(outstanding);
+
+	    printDetail(outstanding);
+
+	}
+	
+	private void printBanner() {
+		System.out.println("************************");
+		System.out.println("*******ê³ ê° ì™¸ìƒ*******");
+		System.out.println("************************");
+	}
+
+	private double getOutstanding(double outstanding) {
+		// ì™¸ìƒì•¡ ê³„ì‚° 
+		Enumeration e = _orders.elements();
+		
 	    while(e.hasMoreElements()) {
 	        Order each = (Order)e.nextElement();
 	        outstanding += each.getAmount();
 	    }
+		return outstanding;
+	}
 
-	    // ¼¼ºÎ³»¿ª Ãâ·Â
-	    System.out.println("name: " + _name);
-	    System.out.println("amount: " + outstanding);
-
+	private void printDetail(double outstanding) {
+		// ì„¸ë¶€ë‚´ì—­ ì¶œë ¥ 
+		System.out.println("name: " + _name);
+		System.out.println("amount: " + outstanding);
 	}
 	
 }
