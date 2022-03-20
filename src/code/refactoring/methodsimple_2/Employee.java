@@ -4,6 +4,11 @@ public class Employee {
 
 	private double salary=100;
 	
+	void percentRaise(double factor) {
+		salary *= ( 1 + factor );
+		System.out.println("tenPercentRaise --> " + salary );
+	}
+	
 	void tenPercentRaise () {
 		salary *= 1.1;
 		System.out.println("tenPercentRaise --> " + salary );
