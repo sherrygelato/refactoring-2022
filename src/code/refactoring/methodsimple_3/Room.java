@@ -2,9 +2,9 @@ package code.refactoring.methodsimple_3;
 
 public class Room {
 	boolean withinPlan(HeatingPlan plan) {
-	    int low = daysTempRange().getLow();
-	    int high = daysTempRange().getHigh();
-	    return plan.withinRange(low, high);		//ÆÄ¶ó¹ÌÅÍ¸¦ °´Ã¼·Î ÀüÈ¯
+//	    int low = daysTempRange().getLow();
+//	    int high = daysTempRange().getHigh();
+	    return plan.withinRange(daysTempRange());		//ï¿½Ä¶ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½È¯
 	}
 	
 	TempRange daysTempRange() {   
