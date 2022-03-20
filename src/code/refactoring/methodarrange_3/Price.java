@@ -11,10 +11,12 @@ public class Price {
 	}
 
 	public double price() {
-		//°áÁ¦¾×(price) = ÃÑ±¸¸Å¾×(base price) - ´ë·®±¸¸ÅÇÒÀÎ(discount) + ¹è¼Ûºñ(shipping)
-		return _quantity * _itemPrice - 
-				Math.max(0,  _quantity - 500) * _itemPrice * 0.05 + 
-				Math.min(_quantity * _itemPrice * 0.1,  1000.0);
+		//ê²°ì œì•¡ (price) = ì´êµ¬ë§¤ï¿½Ñ±ï¿½ï¿½Å¾ï¿½(base price) - ëŒ€ëŸ‰êµ¬ë§¤í• ì¸ ï¿½ë·®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(discount) + ë°°ì†¡ë¹„ ï¿½ï¿½Ûºï¿½(shipping)
+		int basePrice = _quantity * _itemPrice;
+		double quantityDiscount = Math.max(0,  _quantity - 500) * _itemPrice * 0.05;
+		double shippingFee = Math.min(basePrice * 0.1,  1000.0);
+		
+		return basePrice - quantityDiscount + shippingFee;
 	}
 
 }
