@@ -7,7 +7,7 @@ import java.util.Vector;
 public class Account {
 	Vector _entries = new Vector();
 
-	// µÎ ³¯Â¥ »çÀÌÀÇ °èÁÂÀÔÃâ±Ý ÇöÈ²À» ¾Ë¾Æ³»´Â ¸Þ¼­µå
+	// ï¿½ï¿½ ï¿½ï¿½Â¥ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È²ï¿½ï¿½ ï¿½Ë¾Æ³ï¿½ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½
 	double getFlowBetween (Date start, Date end) {
 		double result = 0;
 		_entries.addElement(new Entry(10, new Date(2016, 1, 2)));
