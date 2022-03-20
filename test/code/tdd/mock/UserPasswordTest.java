@@ -24,9 +24,13 @@ public class UserPasswordTest {
 		String userId = "sweet88";
 		String password = "potato";
 		
-		// password ÀúÀå
-		// ÀúÀåµÈ password Á¶È¸ ÈÄ º¹È£È­
-		// ÀúÀåµÈ password ÀÏÄ¡¿©ºÎ ºñ±³
+		// password ì•”í˜¸í™”ëœ ì €ì¥ 
+		// ì €ì¥ëœ  password ì¡°íšŒ í›„ ë³µí˜¸í™” 
+		// ì €ì¥ëœ  password ì¼ì¹˜ì—¬ë¶€ë¹„êµ 
+		
+		register.savePassword(userId, mdCipher.encrypt(password));
+		String decryptedPassword = mdCipher.decrypt(register.getPassword(userId));
+		assertEquals(password, decryptedPassword);
 
 	}
 

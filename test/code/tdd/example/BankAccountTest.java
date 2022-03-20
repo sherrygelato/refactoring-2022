@@ -9,6 +9,7 @@ import code.tdd.example.BankAccount;
 
 
 public class BankAccountTest {
+	BankAccount bankAccount = null;
 	
 	
 	@Before
@@ -22,24 +23,33 @@ public class BankAccountTest {
 
 	@Test
 	public void testGetBalance() throws Exception {
-		// 10000 ¿øÀ¸·Î °èÁÂ»ı¼º
-		// ÀÜ°íÁ¶È¸°á°ú ÀÏÄ¡¿©ºÎ È®ÀÎ
+		// 10000 ì›ìœ¼ë¡œ ê³„ì¢Œìƒì„± 
+		// ì”ê³ ì¡°íšŒê²°ê³¼ ì¼ì¹˜ì—¬ë¶€ í™•ì¸ 
+		bankAccount = new BankAccount(10000);
+		bankAccount.getBalance();
+		assertEquals("ê³„ì¢Œìƒì„± í›„ ì”ê³ ì¡°íšŒ", 10000, bankAccount.getBalance());
 		
 	}
 	
 	@Test
 	public void testDeposit() throws Exception {
-		// 10000 ¿øÀ¸·Î °èÁÂ»ı¼º
-		// 1000¿ø ÀÔ±İ
-		// ÀÜ°íÁ¶È¸°á°ú 11000 ÀÏÄ¡¿©ºÎ È®ÀÎ
+		// 10000 ì›ìœ¼ë¡œ ê³„ì¢Œìƒì„± 
+		// 1000ï¿½ï¿½ ì…ê¸ˆ 
+		// ì”ê³ ì¡°íšŒê²°ê³¼ 11000 ì¼ì¹˜ì—¬ë¶€ í™•ì¸ 
+		bankAccount = new BankAccount(10000);
+		bankAccount.deposit(1000);
+		assertEquals("ê³„ì¢Œìƒì„± í›„ 1000ì› ì¶”ê°€ ì…ê¸ˆ", 11000, bankAccount.getBalance());
+		
 		
 	}
 	@Test
 	public void testWithdraw() throws Exception {
-		// 10000 ¿øÀ¸·Î °èÁÂ»ı¼º
-		// 1000¿ø Ãâ±İ
-		// ÀÜ°íÁ¶È¸°á°ú 9000 ÀÏÄ¡¿©ºÎ È®ÀÎ
+		// 10000 ì›ìœ¼ë¡œ ê³„ì¢Œìƒì„± 
+		// 1000ï¿½ï¿½ ì¶œê¸ˆ 
+		// ï¿½Ü°ï¿½ï¿½ï¿½È¸ï¿½ï¿½ï¿½ 9000 ï¿½ï¿½Ä¡ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½
+		bankAccount = new BankAccount(10000);
+		bankAccount.withdraw(1000);
+		assertEquals("ê³„ì¢Œìƒì„± í›„ 1000ì› ì¶”ê°€ ì¶œê¸ˆ", 9000, bankAccount.getBalance());
 	} 
 
 }
- 

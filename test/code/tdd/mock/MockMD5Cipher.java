@@ -5,16 +5,16 @@ public class MockMD5Cipher implements MD5Cipher {
 	@Override
 	public String encrypt(String source) {
 		// TODO Auto-generated method stub
-		return null;
+		return "8ee2027983915ec78acc45027d874316";
 	}
 
 	@Override
 	public String decrypt(String source) {
 		// TODO Auto-generated method stub
-		return null;
+		return "potato";
 	}
 	
-	//  "potato"  ¾ÏÈ£°ªÀº  "8ee2027983915ec78acc45027d874316"
+	//  "potato"  ì•”í˜¸ê°’ì€ "8ee2027983915ec78acc45027d874316"
 
 
 }
