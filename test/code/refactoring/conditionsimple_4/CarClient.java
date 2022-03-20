@@ -17,19 +17,19 @@ public class CarClient {
 		switch(key) {
 		case COMPACTCAR :
 			currentSpeed = currentSpeed + 10;
-			System.out.println("°æÂ÷°¡ ¼±ÅÃµÇ¾ú½À´Ï´Ù.");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ÃµÇ¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
 			break;
 		case SEDANCAR :
 			currentSpeed = currentSpeed + 20;
-			System.out.println("ÁßÇüÂ÷°¡ ¼±ÅÃµÇ¾ú½À´Ï´Ù.");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ÃµÇ¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
 			break;
 		case SPORTCAR :
 			currentSpeed = currentSpeed + 30;
-			System.out.println("½ºÆ÷Ã÷Ä«°¡ ¼±ÅÃµÇ¾ú½À´Ï´Ù.");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä«ï¿½ï¿½ ï¿½ï¿½ï¿½ÃµÇ¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
 			break;
 		}
 		
-		System.out.println("¼±ÅÃÇÑ ÀÚµ¿Â÷ÀÇ ÇöÀç¼Óµµ´Â "+currentSpeed+ " ÀÔ´Ï´Ù.");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Óµï¿½ï¿½ï¿½ "+currentSpeed+ " ï¿½Ô´Ï´ï¿½.");
 	}
 
 }
