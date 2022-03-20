@@ -7,12 +7,14 @@ public class AccountTest {
 		Account account= new Account();
 	
 		int amount = 150;
-		if (account.canWithdraw(amount) == -1)
-			handleOverdrawn();
-		else {
+		
+		try {
 			account.canWithdraw(amount);
 			doTheUsualThing();
+		} catch (IllegalArgumentException e) {
+			handleOverdrawn();
 		}
+		
 	}
 
 	private static void doTheUsualThing() {
