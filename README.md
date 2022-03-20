@@ -54,7 +54,7 @@
 4. code.refactoring.methodsimple1 => 재확인 필요
 5. code.refactoring.methodarray2
 6. code.refactoring.methodarray3
-7. code.refactoring.methodarray4
+7. code.refactoring.methodarray4 => 재확인 필요
 8. code.refactoring.methodsimple2
 9. code.refactoring.methodsimple3
 10. code.refactoring.methodsimple4
