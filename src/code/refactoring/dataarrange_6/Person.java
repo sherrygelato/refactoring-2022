@@ -1,10 +1,12 @@
 package code.refactoring.dataarrange_6;
 
+import java.util.HashSet;
 import java.util.Set;
 
 public class Person {
 	
-	private Set _courses;
+	private Set _courses = new HashSet();
+	// Set s = new HashSet();
 	
 	public Set getCourses() {
 		return _courses;
@@ -13,6 +15,12 @@ public class Person {
 		_courses = arg;
 	}
 
+	public void addCourse(Course course) {
+		_courses.add(course);
+	}
 
+	public void removeCourse(Course course) {
+		_courses.remove(course);
+	}
 }
 
