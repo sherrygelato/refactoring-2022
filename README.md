@@ -80,4 +80,4 @@
 22. code.refactoring.general3
 23. code.refactoring.conditionsimple4
 24. code.refactoring.dataarrange9
-25. 
+25. code.refactoring.general4
