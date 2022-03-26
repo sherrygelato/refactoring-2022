@@ -87,5 +87,5 @@
 29. code.refactoring.dataarrange6 ⇒ 확인 필요
 30. code.refactoring.methodsimple5
 31. code.refactoring.dataarrange5
-32. code.refactoring.complex3 => 확인 필요, 1), (2), (3), (4)
+32. code.refactoring.complex3 => 확인 필요, 1), (2), (3), (4), (5) 확인필요
 33. 
