@@ -69,3 +69,4 @@
 <br><br>
 
 # 2일차 실습
+14. code.refactoring.classmove1
