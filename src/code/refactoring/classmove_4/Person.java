@@ -4,11 +4,15 @@ public class Person {
 	
 	Department _department = new Department();
 
-	public Department getDepartment() {
-		return _department;
-	}
+	// public Department getDepartment() {
+	// 	return _department;
+	// }
 
 	public void setDepartment(Department arg) {
 		this._department = arg;
 	}
+
+	public String getManager() {
+        return _department.getManager();
+    }
 }
