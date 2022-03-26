@@ -1,7 +1,7 @@
 # refactoring-2022
 - 3/19, 3/26 Refactoring from edu.kosta.or.kr
 
-
+<br><br>
 
 # 1일차 요약
 
@@ -45,7 +45,7 @@
 - 중복 조건식 통합
 - 여러 겹의 조건문을 감시절로 전환
 
-
+<br><br>
 
 # 1일차 실습
 1. code.refactoring.junit
@@ -61,3 +61,11 @@
 11. code.refactoring.methodsimple7
 12. code.refactoring.conditionsimple1
 13. code.refactoring.conditionsimple3
+
+<br><br>
+
+# 2일차 요약
+
+<br><br>
+
+# 2일차 실습
