@@ -77,3 +77,4 @@
 19. code.refactoring.complex2 => 확인 필요
 20. code.refactoring.general1
 21. code.refactoring.general2
+22. code.refactoring.general3
