@@ -66,6 +66,38 @@
 
 # 2일차 요약
 
+1. 객체지향 설계 원칙
+- 단일 책임원칙 SRP
+- 적절한 상속(다향성) LSP
+- 느슨한 결합을 유지 ISP
+
+2. 리팩토링 기법 중 객체 구조화 기법 (ㅠ)
+- 클래스 추출 Extract Class
+- 클래스 내용 직접삽입 Inline Class
+- 대리객체 은혜 Hide Delegate
+
+3. 리팩토링 기법 중 일반화 처리
+- 인터페이스 추출 Extract Interface
+- 필드 하향 Pull Down Field / 메소드 하향 Pull Down Method
+- 템플릿 메소드 형성 Form Template Method
+
+4. 리팩토링 기법 중 데이터 구조화 (ㅠ)
+- 필드 캡슐화 Encapsulate Field
+- 데이터 값을 객체로 전환 Replace Data Value with Object
+- 배열을 객체로 전환 Replace Array with Object
+
+5.
+
+6. 리팩토링 수행 시 체크해야 하는 사항
+- 중복된 코드가 없는지 확인
+- 소스 코드의 가독성이 좋은지 확인
+- 클래스, 메소드 중 분할, 통합할 내용이 없는지 확인
+
+7. 리팩토링 수행 시점
+- 개발 중에 틈틈히
+- 버그가 발생되거나 프로그램에 문제점이 파악될 때 수행
+- 프로그램을 추가, 수정할 때마다 조금씩 수행
+
 <br><br>
 
 # 2일차 실습
