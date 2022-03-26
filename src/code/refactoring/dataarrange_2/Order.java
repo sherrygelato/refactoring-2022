@@ -2,18 +2,19 @@ package code.refactoring.dataarrange_2;
 
 public class Order {
 	
-	private String _customer;
+	// private String _customer;
+	private Customor _customor;
 	
 	public Order (String customer) {
-		_customer = customer;
+		_customor = new Customor(_customor);
 	}
 	
 	public String getCustomerName() {
-		return _customer;
+		return _customor.get_customer();
 	}
 
 	public void setCustomer(String arg) {
-		_customer = arg;
+		_customor = new Customor(_customor);
 	}
 	
 }

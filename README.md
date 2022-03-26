@@ -83,4 +83,5 @@
 25. code.refactoring.general4 => 확인 필요
 26. code.refactoring.classmove5
 27. code.refactoring.complex4 => 놓침
-28. code.refactoring.general6
+28. code.refactoring.general6 => 확인 필요
+29. 
