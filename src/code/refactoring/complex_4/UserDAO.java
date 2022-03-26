@@ -8,49 +8,76 @@ import java.sql.SQLException;
 
 public class UserDAO {
 	
-	public Connection getConnection() {
+	// public Connection getConnection() {
 		
-		String url = "url";
-		String id = "id";
-		String pw = "password";
+	// 	String url = "url";
+	// 	String id = "id";
+	// 	String pw = "password";
 		
-		try {
-			Class.forName("com.mysql.jdbc.Driver");
-			return DriverManager.getConnection(url, id, pw);
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
-			return null;
-		}
-	}
+	// 	try {
+	// 		Class.forName("com.mysql.jdbc.Driver");
+	// 		return DriverManager.getConnection(url, id, pw);
+	// 	} catch (Exception e) {
+	// 		System.out.println(e.getMessage());
+	// 		return null;
+	// 	}
+	// }
 	
-	// 문제점 
-	// 중복코드 - QUery 와 인자들 뺴고는 모든 내용이 중복이 발생됨
-	// 변경이 되는 부분과 변경이 되지않는 부분으로 분리
-	
+	// ???
+	// ???? - QUery ? ??? ??? ?? ??? ?? ??
+	// ???? ??? ??? ?? ?? ???? ??
+
 	public void addUser(UserVO userVO) throws SQLException {
-		String sql = "insert into USERS values(?,?,?,?)";
-		Connection conn = null;
-		PreparedStatement pstmt = null;
+
+		JdbcUtil jdbcUtil = new JdbcUtil() {
+
+			@Override
+			public String createQuery() {
+				String sql = "";
+				return sql;
+			}
+
+			@Override
+			public void setParameters(UserVO userVO, PreparedStatement preparedStatement) {
+				
+			}
+
+		};
+
+	// 	String sql = createQuery(); // ????
+	// 	Connection conn = null;
+	// 	PreparedStatement pstmt = null;
 		
-		try {
-			conn = getConnection();
-			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, userVO.getUserId());
-			pstmt.setString(2, userVO.getPassword());
-			pstmt.setString(3, userVO.getName());
-			pstmt.setString(3, userVO.getEmail());
+	// 	try {
+	// 		conn = getConnection();
+	// 		// ?? ???? ???? ??
+	// 		pstmt = conn.prepareStatement(sql);
+
+	// 		setParameters(userVO, pstmt); // ????
 			
-			pstmt.executeUpdate();		
+	// 		pstmt.executeUpdate();		
 			
-		} finally {
-			if(pstmt != null) {
-				pstmt.close();
-			}
+	// 	} finally {
+	// 		if(pstmt != null) {
+	// 			pstmt.close();
+	// 		}
 			
-			if(conn != null) {
-				conn.close();
-			}
-		}
+	// 		if(conn != null) {
+	// 			conn.close();
+	// 		}
+	// 	}
+	}
+
+	private String createQuery() {
+		String sql = "insert into USERS values(?,?,?,?)";
+		return sql;
+	}
+
+	private void setParameters(UserVO userVO, PreparedStatement pstmt) throws SQLException {
+		pstmt.setString(1, userVO.getUserId());
+		pstmt.setString(2, userVO.getPassword());
+		pstmt.setString(3, userVO.getName());
+		pstmt.setString(3, userVO.getEmail());
 	}
 
 	public void removeUser(String userId) throws SQLException {

@@ -82,3 +82,4 @@
 24. code.refactoring.dataarrange9
 25. code.refactoring.general4 => 확인 필요
 26. code.refactoring.classmove5
+27. code.refactoring.complex4

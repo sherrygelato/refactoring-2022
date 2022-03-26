@@ -7,6 +7,8 @@ import java.sql.Connection;
 import org.junit.Before;
 import org.junit.Test;
 
+// DB 구현 생략으로 테스트 코드 구현 불가능 
+
 public class UserDAOTest {
 	
 	private UserDAO userDAO;
