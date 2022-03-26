@@ -14,8 +14,6 @@ public class DateRange {
         return _endDate;
     }
 
-    
-
     public DateRange(Date startDate, Date endDate) {
         this._startDate = startDate;
         this._endDate = endDate;
