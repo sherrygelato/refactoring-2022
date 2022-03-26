@@ -17,6 +17,7 @@ public class AccountTest {
 	public void testoverdraftCharge() {
 		Account account = new Account(10);
 		assertTrue(account.overdraftCharge() == 12.55);	
+		// 클라이언트 소스를 변경하지 않기 위해서 
 	}
 
 }
