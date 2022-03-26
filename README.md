@@ -78,3 +78,5 @@
 20. code.refactoring.general1
 21. code.refactoring.general2
 22. code.refactoring.general3
+23. code.refactoring.conditionsimple4
+24. 

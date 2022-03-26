@@ -7,29 +7,26 @@ public class CarClient {
 	public static final int SEDANCAR = 2;
 	public static final int SPORTCAR = 3;
 
-
 	public static void main(String[] args) {
 		
+		CarType cartype = null;
 		Scanner input = new Scanner(System.in);
 		int key = input.nextInt();
-		int currentSpeed = 0; 
 		  
+		// 경우의 수 조건 따라 처리 되는 파일 클래스 결정
 		switch(key) {
 		case COMPACTCAR :
-			currentSpeed = currentSpeed + 10;
-			System.out.println("������ ���õǾ����ϴ�.");
+			cartype = new CompactCar();
 			break;
 		case SEDANCAR :
-			currentSpeed = currentSpeed + 20;
-			System.out.println("�������� ���õǾ����ϴ�.");
+			cartype = new SedanCar();
 			break;
 		case SPORTCAR :
-			currentSpeed = currentSpeed + 30;
-			System.out.println("������ī�� ���õǾ����ϴ�.");
+			cartype = new SportCar();
 			break;
 		}
 		
-		System.out.println("������ �ڵ����� ����ӵ��� "+currentSpeed+ " �Դϴ�.");
+		System.out.println("선택한 자동차의 속도는 "+ cartype.speedUp() + " 입니다.");
 	}
 
 }
