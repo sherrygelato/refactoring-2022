@@ -74,3 +74,4 @@
 16. code.refactoring.classmove3
 17. code.refactoring.methodarrange6
 18. code.refactoring.classmove4
+19. code.refactoring.complex2 => 확인 필요
