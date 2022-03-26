@@ -8,22 +8,29 @@ public class Person {
 	public String getOfficeAreaCode() {
 		return telNumber.getOfficeAreaCode();
 	}
+
 	public void setOfficeAreaCode(String officeAreaCode) {
 		telNumber.setOfficeAreaCode(officeAreaCode);
 	}
+
 	public String getOfficeNumber() {
 		return telNumber.getOfficeNumber();
 	}
+
 	public void setOfficeNumber(String officeNumber) {
 		telNumber.setOfficeNumber(officeNumber);
 	}
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	public String getTelephoneNumber() {
-		return ("(" + telNumber.getOfficeAreaCode() + ")" + telNumber.getOfficeNumber());
+		// Delegate Method (위임)
+		return telNumber.getOfficeNumber();
 	}
 }

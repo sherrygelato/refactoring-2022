@@ -17,5 +17,4 @@ public class TelephoneNumber {
 	public void setOfficeNumber(String officeNumber) {
 		this.officeNumber = officeNumber;
 	}
-	
 }
