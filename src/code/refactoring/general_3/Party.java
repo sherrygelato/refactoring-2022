@@ -2,7 +2,7 @@ package code.refactoring.general_3;
 
 public abstract class Party {
 
-    // 1. name 속성 상향처리
+    // 1. 공통되는 name 속성 상향처리
     private String _name;
 
     protected Party(String name) {
