@@ -2,21 +2,20 @@ package code.refactoring.classmove_3;
 
 public class Person {
 	
+	private TelephoneNumber telNumber = new TelephoneNumber();
 	private String name;
-	private String officeAreaCode;
-	private String officeNumber;
-	
+
 	public String getOfficeAreaCode() {
-		return officeAreaCode;
+		return telNumber.getOfficeAreaCode();
 	}
 	public void setOfficeAreaCode(String officeAreaCode) {
-		this.officeAreaCode = officeAreaCode;
+		telNumber.setOfficeAreaCode(officeAreaCode);
 	}
 	public String getOfficeNumber() {
-		return officeNumber;
+		return telNumber.getOfficeNumber();
 	}
 	public void setOfficeNumber(String officeNumber) {
-		this.officeNumber = officeNumber;
+		telNumber.setOfficeNumber(officeNumber);
 	}
 	public String getName() {
 		return name;
@@ -24,8 +23,7 @@ public class Person {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
 	public String getTelephoneNumber() {
-		return ("(" + officeAreaCode + ")" + officeNumber);
+		return ("(" + telNumber.getOfficeAreaCode() + ")" + telNumber.getOfficeNumber());
 	}
 }

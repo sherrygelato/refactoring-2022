@@ -70,3 +70,5 @@
 
 # 2일차 실습
 14. code.refactoring.classmove1
+15. code.refactoring.classmove2
+16. code.refactoring.classmove3
