@@ -72,3 +72,4 @@
 14. code.refactoring.classmove1
 15. code.refactoring.classmove2
 16. code.refactoring.classmove3
+17. code.refactoring.methodarrange6
