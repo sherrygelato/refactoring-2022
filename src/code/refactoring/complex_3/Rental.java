@@ -38,4 +38,13 @@ public class Rental {
 		}
 		return thisAmount;
 	}
+
+	int getRentalPoint() {
+		int thisRentalPoint = 0;
+		thisRentalPoint ++;
+		//최신물을 이틀이상 대여하면 보너스포인트 지급
+		if((aRental.getMovie().getPriceCode() == Movie.NEW_RELEASE) && aRental.getDaysRented() > 1)
+		thisRentalPoint ++;
+		return thisRentalPoint;
+	}
 }

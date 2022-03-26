@@ -27,21 +27,20 @@ public class Customer {
 		String result = getName() + " 고객님의 대여기록\n";
 		
 		while (rentals.hasMoreElements()) {
-			int thisRentalPoint = 0;
+			// double thisAmount = 0;
+			// int thisRentalPoint = 0;
 			Rental aRental = (Rental)rentals.nextElement();
 			
 			// 비디오 종류별 대여료 계산
 			double thisAmount = aRental.getRentalCharge();
 			// 적립 포인트를 1 포인트 증가
-			thisRentalPoint ++;
-			//최신물을 이틀이상 대여하면 보너스포인트 지급
-			if((aRental.getMovie().getPriceCode() == Movie.NEW_RELEASE) && aRental.getDaysRented() > 1)
-			thisRentalPoint ++;
+			int thisRentalPoint = aRental.getRentalPoint();
 			
 			//이번에 대여하는 비디오정보와 대여료를 출력
 			result += "\t" + aRental.getMovie().getTitle()+ "\t" + String.valueOf(thisAmount) + "\n";
 			//현재까지 누적된 총 대여료
 			totalAmount += thisAmount;
+			totalRentalPoint += thisRentalPoint;
 			//푸터행 추가
 			result += "누적 대여료: " + String.valueOf(totalAmount) + "\n";
 			result += "적립 포인트: " + String.valueOf(thisRentalPoint) + "\n";
